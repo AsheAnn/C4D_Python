@@ -21,6 +21,7 @@ def main():
     doc.SetActiveObject(grid) # Select Grid
     c4d.CallCommand(12236) # Make Editable
     c4d.CallCommand(100004788, 50058) # New Python Tag
+    c4d.CallCommand(100004788, 50059) # New Xpresso Tag
 
 
 # Execute main()
