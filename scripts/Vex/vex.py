@@ -1,5 +1,9 @@
 # Program some Houdini's interpolation functions in python for C4d
 
+import math
+
+
+
 # Liner interpolation.
 def lerp(v1, v2, f):
     z = (v2 - v1) * f + v1
@@ -56,8 +60,15 @@ def clamp(val, min, max):
     elif s >= max:
         return max    
     elif max > s > min:
-        return s    
-    
+        return s   
+
+# Return distance between two points.    
+def distance(v1, v2):
+    z = 0
+    for i in range(0, 3):
+        z += pow((v1[i] - v2[i]), 2)
+    sum = round((math.sqrt(z)), 3)
+    return sum  
          
 
         
